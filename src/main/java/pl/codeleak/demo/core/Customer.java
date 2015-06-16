@@ -1,38 +1,28 @@
 package pl.codeleak.demo.core;
 
-import org.springframework.util.Assert;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
-public class Customer extends AbstractEntity {
+@Getter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+@ToString
+@EqualsAndHashCode(of = "id")
+public class Customer {
+
+    @Id
+    @GeneratedValue
+    private Long id;
 
     private String firstname, lastname;
 
     @Column
     private EmailAddress emailAddress;
 
-    public Customer(String firstname, String lastname) {
-
-        Assert.hasText(firstname);
-        Assert.hasText(lastname);
-
-        this.firstname = firstname;
-        this.lastname = lastname;
-    }
-
-    protected Customer() {}
-
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public EmailAddress getEmailAddress() {
-        return emailAddress;
-    }
 }

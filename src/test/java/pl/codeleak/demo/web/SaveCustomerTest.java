@@ -1,5 +1,6 @@
 package pl.codeleak.demo.web;
 
+import org.glassfish.jersey.internal.inject.Custom;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.TestRestTemplate;
@@ -22,8 +23,12 @@ public class SaveCustomerTest {
     @Test
     public void savesCustomer() {
         // act
-        URI uri = restTemplate.postForLocation("http://localhost:9000/customer",
-                new Customer("John", "Doe"));
+        Customer expectedCustomer = Customer.builder()
+                .firstname("John")
+                .lastname("Doe")
+                .build();
+        URI uri = restTemplate.postForLocation("http://localhost:9000/customer", expectedCustomer);
+
         // assert
         ResponseEntity<Customer> responseEntity =
                 restTemplate.getForEntity(uri, Customer.class);
