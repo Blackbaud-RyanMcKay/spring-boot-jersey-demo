@@ -4,11 +4,11 @@ import groovyx.net.http.RESTClient
 import org.springframework.boot.test.SpringApplicationContextLoader
 import org.springframework.test.context.ContextConfiguration
 import pl.codeleak.demo.Application
-import pl.codeleak.support.ApplicationTest
+import pl.codeleak.support.ComponentTest
 import spock.lang.Specification
 
 @ContextConfiguration(loader = SpringApplicationContextLoader.class, classes = Application.class)
-@ApplicationTest
+@ComponentTest
 class HealthSpecification extends Specification {
 
     def "Should return that Jersey is Up and Running"() {

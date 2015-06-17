@@ -1,19 +1,15 @@
 package pl.codeleak.demo.hateoas
 
 import org.apache.commons.lang.builder.EqualsBuilder
-import org.springframework.boot.test.IntegrationTest
-import org.springframework.boot.test.SpringApplicationConfiguration
 import org.springframework.boot.test.TestRestTemplate
 import org.springframework.http.ResponseEntity
-import org.springframework.test.context.web.WebAppConfiguration
 import org.springframework.web.client.RestTemplate
-import pl.codeleak.demo.Application
 import pl.codeleak.demo.core.Customer
 import pl.codeleak.demo.core.EmailAddress
-import pl.codeleak.support.ApplicationTest
+import pl.codeleak.support.ComponentTest
 import spock.lang.Specification
 
-@ApplicationTest
+@ComponentTest
 class CustomerControllerSpec extends Specification {
 
     private RestTemplate restTemplate = new TestRestTemplate("demo", "123");

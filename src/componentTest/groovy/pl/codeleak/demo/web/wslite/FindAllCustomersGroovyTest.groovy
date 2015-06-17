@@ -4,12 +4,12 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner
-import pl.codeleak.support.ApplicationTest
+import pl.codeleak.support.ComponentTest
 import wslite.http.auth.HTTPBasicAuthorization
 import wslite.rest.RESTClient
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ApplicationTest
+@ComponentTest
 class FindAllCustomersGroovyTest {
 
     def client = new RESTClient("http://localhost:9000")

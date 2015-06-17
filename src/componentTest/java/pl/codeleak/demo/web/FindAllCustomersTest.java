@@ -9,12 +9,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.client.RestTemplate;
 import pl.codeleak.demo.core.Customer;
-import pl.codeleak.support.ApplicationTest;
+import pl.codeleak.support.ComponentTest;
 import pl.codeleak.support.Page;
 import pl.codeleak.support.PageAssertion;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ApplicationTest
+@ComponentTest
 public class FindAllCustomersTest {
 
     private RestTemplate restTemplate = new TestRestTemplate("demo", "123");

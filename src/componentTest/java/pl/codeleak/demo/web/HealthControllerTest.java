@@ -7,12 +7,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.client.RestTemplate;
 import pl.codeleak.demo.core.Health;
-import pl.codeleak.support.ApplicationTest;
+import pl.codeleak.support.ComponentTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ApplicationTest
+@ComponentTest
 public class HealthControllerTest {
 
     private RestTemplate restTemplate = new TestRestTemplate("demo", "123");
