@@ -56,8 +56,8 @@ dependencies {
     compile("org.springframework.plugin:spring-plugin-core:1.1.0.RELEASE")
 
     // HSQLDB for embedded database support
-    compile("org.hsqldb:hsqldb")
-    //compile 'com.oracle.jdbc:ojdbc6:11.2.0.3'
+    //compile("org.hsqldb:hsqldb")
+    compile 'com.oracle.jdbc:ojdbc6:11.2.0.3'
 
     compile 'org.liquibase:liquibase-core'
 
@@ -74,6 +74,7 @@ dependencies {
     testCompile 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1'
     testCompile 'com.github.groovy-wslite:groovy-wslite:1.1.0'
     testCompile 'org.spockframework:spock-spring:1.0-groovy-2.4'
+    //testCompile 'com.blackbaud:common-spring-boot-test:1.+'
 }
 
 task wrapper(type: Wrapper) {

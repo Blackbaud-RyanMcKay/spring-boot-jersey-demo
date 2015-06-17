@@ -2,6 +2,7 @@ package pl.codeleak.demo.web.httpbuilder
 
 import groovyx.net.http.RESTClient
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner
@@ -9,6 +10,7 @@ import pl.codeleak.support.ComponentTest
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ComponentTest
+@Ignore
 class FindAllCustomersGroovyTest {
 
     RESTClient client = new RESTClient("http://localhost:9000")

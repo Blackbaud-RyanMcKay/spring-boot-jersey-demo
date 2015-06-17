@@ -1,6 +1,7 @@
 package pl.codeleak.demo.web.wslite
 
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner
@@ -10,6 +11,7 @@ import wslite.rest.RESTClient
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ComponentTest
+@Ignore
 class FindAllCustomersGroovyTest {
 
     def client = new RESTClient("http://localhost:9000")

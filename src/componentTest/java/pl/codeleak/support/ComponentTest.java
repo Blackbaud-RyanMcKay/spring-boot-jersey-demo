@@ -16,7 +16,7 @@ import java.lang.annotation.*;
 @WebAppConfiguration
 @org.springframework.boot.test.IntegrationTest("server.port=9000")
 @ActiveProfiles("web")
-@Sql(scripts = "classpath:/db/data-hsqldb.sql", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
+//@Sql(scripts = "classpath:/db/data-oracle.sql", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
 public @interface ComponentTest {
 
 }

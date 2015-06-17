@@ -3,15 +3,17 @@ databaseChangeLog:
       id: 1
       author: blackbaud
       changes:
+        - createSequence:
+            sequenceName: customer_seq
         - createTable:
             tableName: customer
             columns:
               - column:
                   name: id
                   type: int
-                  autoIncrement: true
                   constraints:
                     primaryKey: true
+                    primaryKeyName: pk_customer
                     nullable: false
               - column:
                   name: firstname

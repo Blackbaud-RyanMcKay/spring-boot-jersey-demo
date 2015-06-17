@@ -1,5 +1,6 @@
 package pl.codeleak.demo.web;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.TestRestTemplate;
@@ -15,6 +16,7 @@ import pl.codeleak.support.PageAssertion;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ComponentTest
+@Ignore
 public class FindAllCustomersTest {
 
     private RestTemplate restTemplate = new TestRestTemplate("demo", "123");
