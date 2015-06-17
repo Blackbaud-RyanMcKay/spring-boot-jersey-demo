@@ -57,8 +57,9 @@ dependencies {
 
     // HSQLDB for embedded database support
     compile("org.hsqldb:hsqldb")
-
     //compile 'com.oracle.jdbc:ojdbc6:11.2.0.3'
+
+    compile 'org.liquibase:liquibase-core'
 
     // Utilities
     compile("com.google.guava:guava:18.0")

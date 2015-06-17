@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: blackbaud
+      changes:
+        - createTable:
+            tableName: customer
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: firstname
+                  type: varchar(30)
+              - column:
+                  name: lastname
+                  type: varchar(30)
+              - column:
+                  name: email
+                  type: varchar(30)
+                  constraints:
+                    unique: true
