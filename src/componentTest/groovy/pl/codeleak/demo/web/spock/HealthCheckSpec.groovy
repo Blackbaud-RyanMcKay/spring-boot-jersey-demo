@@ -28,6 +28,7 @@ class HealthCheckSpec extends Specification{
 
         then:
         json.status == "UP"
+        response.status == 200
     }
 
 }
