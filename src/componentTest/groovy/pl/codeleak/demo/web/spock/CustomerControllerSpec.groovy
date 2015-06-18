@@ -43,9 +43,9 @@ class CustomerControllerSpec extends Specification {
 
         then:
         Customer[] customers = entity.getBody()
-        customers.length == 3
         customers.find { EqualsBuilder.reflectionEquals(it, expectedCustomer1, "id") }
         customers.find { EqualsBuilder.reflectionEquals(it, expectedCustomer2, "id") }
         customers.find { EqualsBuilder.reflectionEquals(it, expectedCustomer3, "id") }
+        customers.length == 3
     }
 }
