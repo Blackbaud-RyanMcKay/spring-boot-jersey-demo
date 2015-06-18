@@ -35,7 +35,6 @@ class SaveCustomerGroovyTest {
         response = client.get(path: response.headers.location - client.url)
 
         def json = response.json
-        assert json.id == 4
         assert json.firstname == 'John'
         assert json.lastname == 'Doe'
         assert json.emailAddress.value == "john@dummy.com"

@@ -18,7 +18,7 @@ public class EmailAddress {
     private String value;
 
     public EmailAddress(String emailAddress) {
-        Assert.isTrue(isValid(emailAddress), "Invalid email address!");
+        Assert.isTrue(isValid(emailAddress), "Invalid email address:"+emailAddress);
         this.value = emailAddress;
     }
 

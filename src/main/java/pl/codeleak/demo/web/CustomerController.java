@@ -30,20 +30,8 @@ public class CustomerController {
     private UriInfo uriInfo;
 
     @GET
-    public Page<Customer> findAll(
-            @QueryParam("page") @DefaultValue("0") int page,
-            @QueryParam("size") @DefaultValue("20") int size,
-            @QueryParam("sort") @DefaultValue("lastname") List<String> sort,
-            @QueryParam("direction") @DefaultValue("asc") String direction) {
-
-        return customerRepository.findAll(
-                new PageRequest(
-                        page,
-                        size,
-                        Sort.Direction.fromString(direction),
-                        sort.toArray(new String[0])
-                )
-        );
+    public Iterable<Customer> findAll() {
+        return customerRepository.findAll();
     }
 
     @GET
