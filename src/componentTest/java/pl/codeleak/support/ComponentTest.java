@@ -14,7 +14,7 @@ import java.lang.annotation.*;
 @Target(ElementType.TYPE)
 @SpringApplicationConfiguration(classes = Application.class)
 @WebAppConfiguration
-@org.springframework.boot.test.IntegrationTest("server.port=9000")
+@org.springframework.boot.test.IntegrationTest({"server.port=9000","management.port=9001"})
 @ActiveProfiles("web")
 @Sql(scripts = "classpath:/db/data-oracle.sql", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
 public @interface ComponentTest {
