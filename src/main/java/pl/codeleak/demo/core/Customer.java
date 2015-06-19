@@ -1,8 +1,10 @@
 package pl.codeleak.demo.core;
 
 import lombok.*;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Getter
@@ -18,7 +20,9 @@ public class Customer {
     @SequenceGenerator(name = "customer_seq_gen", sequenceName = "customer_seq")
     private Long id;
 
-    private String firstname, lastname;
+    @NotEmpty
+    private String firstname;
+    private String lastname;
 
     @Column
     private EmailAddress emailAddress;

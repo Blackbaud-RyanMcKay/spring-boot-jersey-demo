@@ -2,6 +2,8 @@ package pl.codeleak.demo.web.spock
 
 import org.apache.commons.lang.builder.EqualsBuilder
 import org.springframework.boot.test.TestRestTemplate
+import org.springframework.http.HttpHeaders
+import org.springframework.http.HttpMethod
 import org.springframework.http.ResponseEntity
 import org.springframework.web.client.RestTemplate
 import pl.codeleak.demo.core.Customer

@@ -1,6 +1,9 @@
 package pl.codeleak.demo.core;
 
+import lombok.AccessLevel;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.util.Assert;
 
 import javax.persistence.Column;
@@ -8,7 +11,9 @@ import javax.persistence.Embeddable;
 import java.util.regex.Pattern;
 
 @Embeddable
+@Getter
 @EqualsAndHashCode
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class EmailAddress {
 
     private static final String EMAIL_REGEX = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
@@ -18,16 +23,8 @@ public class EmailAddress {
     private String value;
 
     public EmailAddress(String emailAddress) {
-        Assert.isTrue(isValid(emailAddress), "Invalid email address:"+emailAddress);
+        Assert.isTrue(isValid(emailAddress), "Invalid email address:" + emailAddress);
         this.value = emailAddress;
-    }
-
-    protected EmailAddress() {
-
-    }
-
-    public String getValue() {
-        return value;
     }
 
     public static boolean isValid(String candidate) {

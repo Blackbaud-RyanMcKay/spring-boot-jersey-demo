@@ -9,6 +9,7 @@ import pl.codeleak.demo.core.Customer;
 import pl.codeleak.demo.core.CustomerRepository;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
@@ -41,7 +42,7 @@ public class CustomerController {
     }
 
     @POST
-    public Response save(Customer customer) {
+    public Response save(@Valid Customer customer) {
 
         customer = customerRepository.save(customer);
 
