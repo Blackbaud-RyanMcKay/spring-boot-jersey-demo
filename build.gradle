@@ -22,6 +22,7 @@ buildscript {
 
 apply plugin: "blackbaud-internal"
 apply plugin: 'spring-boot'
+apply plugin: 'pmd'
 
 jar {
     baseName = 'spring-boot-jersey-demo'
